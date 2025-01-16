@@ -26,6 +26,16 @@ class User_model extends CI_Model {
     public function insert_category_db($data){
         return $this->db->insert('land_categories', $data);
     }
+    public function insert_property($price_data){
+        return $this->db->insert('properties', $price_data);
+    }
+    public function insert_property_docs($property_data){
+        return $this->db->insert('properties_docs', $property_data);
+    }
+    public function savePropertyImages($data)
+    {
+        return $this->db->insert('property_images', $data);
+    }
 
     public function get_all_categories() {
         $query = $this->db->get('land_categories'); // 'categories' is the table name

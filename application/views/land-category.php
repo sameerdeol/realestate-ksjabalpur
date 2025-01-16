@@ -20,6 +20,7 @@
                       </div>                 
                       <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                     </form>
+
 					<?php if ($this->session->flashdata('error')): ?>
                         <div class="error_message">
                             <?php echo $this->session->flashdata('error'); ?>
@@ -33,6 +34,37 @@
                   </div>
                 </div>
               </div>
+
+  <!-- ----popup start----- -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Input Field 1 -->
+          <div class="form-group">
+            <label for="input1">Category Name</label>
+            <input type="text" value="" name="category_name" class="form-control" id="input1" placeholder="Enter value">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ------popup end-------- -->
+
+
 			  
               <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
@@ -41,16 +73,16 @@
                   <!-- <p class="card-description">
                     Add class <code>.table</code>
                   </p> -->
-                  <div class="table-responsive">
+          <div class="table-responsive">
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Category</th>
-								<th>Action</th>				
-							</tr>
-						</thead>
-						<tbody> 
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Category</th>
+                  <th>Action</th>				
+                </tr>
+              </thead>
+              <tbody> 
 							<?php if (!empty($categories)): ?>
 								<?php 
 								$counter = 1; // Initialize the counter
@@ -59,8 +91,8 @@
 										<td><?= $counter; ?></td> <!-- Increment the counter dynamically -->
 										<td><?= $category['Category']; ?></td>
 										<td>
-											<button class="btn btn-primary btn-sm">Edit</button>
-											<button class="btn btn-danger btn-sm">Delete</button>
+											<a href="<?= base_url('lands/edit/').$category['id']; ?>"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</a>
+											<a href="<?= base_url('lands/delete/').$category['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
 										</td>
 									</tr>
 									<?php 
@@ -72,17 +104,6 @@
 								</tr>
 							<?php endif; ?>                    
 						</tbody>
-
-						<!-- <tfoot>
-							<tr>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</tfoot> -->
 					</table>
                   </div>
                 </div>
