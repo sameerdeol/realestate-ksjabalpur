@@ -1,0 +1,16 @@
+.success_message{
+    margin-top: 13px;
+    background: #639f63;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 3px;
+    color: white;
+}
+.error_message{
+    margin-top: 13px;
+    background: #eb4343;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 3px;
+    color: white;
+}

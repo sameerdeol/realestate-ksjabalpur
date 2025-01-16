@@ -1,0 +1,1 @@
+<h1>Land types</h1>
