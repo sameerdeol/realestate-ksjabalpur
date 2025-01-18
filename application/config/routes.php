@@ -55,3 +55,6 @@ $route['LandTypes'] = 'LandTypes';
 $route['dashboard'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['lands/getCategoryData'] = 'lands/getCategoryData';
+$route['lands/updateCategory'] = 'lands/updateCategory';
+

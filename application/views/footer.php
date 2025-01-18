@@ -26,7 +26,7 @@
 	<script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
 	<script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap4.js"></script>
     <!-- container-scroller -->
-
+     
     <!-- plugins:js -->
     <script src="<?php echo base_url('template'); ?>/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
