@@ -36,7 +36,11 @@
               </div>
 
   <!-- ----popup start----- -->
+<<<<<<< HEAD
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+=======
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>>>>>>> 311645cad6a6f531e472a467b564ef451706ad87
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -47,6 +51,10 @@
       </div>
       <div class="modal-body">
         <form>
+<<<<<<< HEAD
+=======
+          <!-- Input Field 1 -->
+>>>>>>> 311645cad6a6f531e472a467b564ef451706ad87
           <div class="form-group">
             <label for="input1">Category Name</label>
             <input type="text" value="" name="category_name" class="form-control" id="input1" placeholder="Enter value">
@@ -59,6 +67,7 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div> -->
 <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -87,6 +96,10 @@
 </div>
 
 
+=======
+</div>
+
+>>>>>>> 311645cad6a6f531e472a467b564ef451706ad87
 <!-- ------popup end-------- -->
 
 
@@ -116,6 +129,7 @@
 										<td><?= $counter; ?></td> <!-- Increment the counter dynamically -->
 										<td><?= $category['Category']; ?></td>
 										<td>
+<<<<<<< HEAD
                     <a href="javascript:void(0);" 
                        class="btn btn-danger btn-sm"
                       data-id="<?= $category['id']; ?>" 
@@ -124,6 +138,10 @@
                       Edit
                     </a>
                     <a href="javascript:void(0);" class="btn btn-danger btn-sm delete-btn" data-id="<?= $category['id']; ?>">Delete</a>
+=======
+											<a href="<?= base_url('lands/edit/').$category['id']; ?>"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</a>
+											<a href="<?= base_url('lands/delete/').$category['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
+>>>>>>> 311645cad6a6f531e472a467b564ef451706ad87
 										</td>
 									</tr>
 									<?php 

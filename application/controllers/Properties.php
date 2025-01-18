@@ -35,7 +35,6 @@ class Properties extends CI_Controller {
 	
 	public function index(){
 		$data['categories'] = $this->User_model->get_all_categories();
-		$data['property_details'] = $this->User_model->get_all_properties();
 		$this->load->view('header');
 		$this->load->view('sidebar');
 		$this->load->view('properties',$data);

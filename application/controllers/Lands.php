@@ -46,6 +46,7 @@ class Lands extends CI_Controller {
 
         redirect('Lands/Category');
     }
+<<<<<<< HEAD
     // public function edit(){
         
     // }
@@ -107,6 +108,11 @@ class Lands extends CI_Controller {
     }
 
         
+=======
+    public function edit(){
+        
+    }
+>>>>>>> 311645cad6a6f531e472a467b564ef451706ad87
   
 }
 
